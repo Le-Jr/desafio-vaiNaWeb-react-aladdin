@@ -67,7 +67,7 @@ body {
                 width: 200px;
                 height: 65px;
                 font-size: 20px;
-                margin-bottom: 2em;
+                margin-bottom: .5em;
             }
         }
 
@@ -83,7 +83,7 @@ body {
 
         .container {
 
-            margin-bottom: 5em;
+            margin-bottom: 1.5em;
             @include displayFlex();
         }
 
