@@ -75,14 +75,14 @@ body {
             height: 650px;
 
             @media (max-width: 500px) and (min-width: 300px) {
-                width: 333px;
-                height: 342px;
+                margin-left: 3.5em;
+                width: 450px;
+                height: 460px;
             }
 
         }
 
         .container {
-
             margin-bottom: 1.5em;
             @include displayFlex();
         }
