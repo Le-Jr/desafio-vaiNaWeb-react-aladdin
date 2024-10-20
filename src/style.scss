@@ -82,8 +82,11 @@ body {
         }
 
         .container {
-            margin-top: 7em;
-            margin-bottom: 1.5em;
+            @media (max-width: 500px) and (min-width: 300px) {
+                margin-top: 7em;
+                margin-bottom: 1.5em;
+            }
+
             @include displayFlex();
         }
 
