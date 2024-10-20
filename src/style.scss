@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+$font: "Sevillana", cursive;
+
+@mixin backgroundImage {
+    background-image: url("https://raw.githubusercontent.com/mariaccarolina/TurmaFDV/refs/heads/main/imagens/Imagem%20palacio.png");
+    background-size: cover;
+    //Faz a imagem de fundo cobrir toda a tela
+    background-position: center;
+    //Centraliza a imagem de fundo 
+    background-repeat: no-repeat;
+    position: relative;
+    //Torna o body o elemento pai para os elementos filhos se posicionarem 
+}
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+body {
+    font-family: $font;
+    color: white;
+    min-height: 100vh;
+    @include backgroundImage();
+
+
+
+    z-index: 0;
+    //Mantém a imagem de fundo abaixo de todos os outros elementos 
+
+    main {
+        z-index: 1;
+        // Mantém todo o conteúdo da Main acima do Body
+
+        @include displayFlex();
+
+        h1 {
+            font-size: 62px;
+            line-height: 84.13px;
+            font-weight: 400;
+            margin-top: .2em;
+
+            @media (max-width: 500px) and (min-width: 300px) {
+                font-size: 20px;
+                text-align: center;
+                line-height: 2em;
+            }
+        }
+
+
+        button {
+            width: 400px;
+            height: 71px;
+            border-radius: 50px;
+            font-family: $font;
+            font-size: 40px;
+            border: none;
+            color: white;
+            background-color: #007BFF;
+
+            @media (max-width: 500px) and (min-width: 300px) {
+                background-color: #B74794;
+                width: 200px;
+                height: 65px;
+                font-size: 20px;
+                margin-bottom: 2em;
+            }
+        }
+
+        .lampada {
+            @media (max-width: 500px) and (min-width: 300px) {
+                width: 333px;
+                height: 342px;
+            }
+
+        }
+
+        .container {
+            width: 772px;
+            height: 728px;
+            margin-bottom: 5em;
+            @include displayFlex();
+        }
+
+
+    }
+
+}
